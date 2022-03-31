@@ -33,57 +33,61 @@ const vue_app = Vue.createApp({
         return {
             // This holds your movies.json data.
             movies: [],
-            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
             title: "IMDB + Alina's Top 8 Movies",
             owner: "Alina Zaman",
-            github: "https://122azaman.github.io/zaman-p3/",
+            github: "https://github.com/122azaman",
       }
     },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
             getMonthText(dateArray) {
-              switch(dateArray) {
-                case 0:
+              let dateStr = " ";
+              let month = dateArray[1];
+              let day = dateArray[2];
+              let year = dateArray[0];
+
+              switch (month) {
+                case 1:
                 month = "January";
                 break;
-                case 1:
+                case 2:
                 month = "February";
                 break;
-                case 2:
+                case 3:
                 month = "March";
                 break;
-                case 3:
+                case 4:
                 month = "April";
                 break;
-                case 4:
+                case 5:
                 month = "May";
                 break;
-                case 5:
+                case 6:
                 month = "June";
                 break;
-                case 6:
-                month = "July";
                 case 7:
-                month = "August";
+                month = "July";
                 break;
                 case 8:
-                month = "September";
+                month = "August";
                 break;
                 case 9:
-                month = "October";
+                month = "September";
                 break;
                 case 10:
-                month = "November";
+                month = "October";
                 break;
                 case 11:
+                month = "November";
+                break;
+                case 12:
                 month = "December";
                 break;
               }
-            return month + " " dateArray[2] + ", " dateArray[0] ;
+              return month + " " + day + ", " + year ;
             }
-
-
       }
+
 })
 
 vue_app.mount("#vue_app")
