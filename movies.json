@@ -68,5 +68,19 @@
             "likes": 812,
             "dislikes": 101,
             "posterindex": 0
+      },
+      {
+            "title": "The Hunger Games",
+            "iscore": 7.2,
+            "rating": "PG-13",
+            "runtime": 142,
+            "released": [2012, 3, 23],
+            "country": "USA",
+            "posters": ["img/.jpg"],
+            "imdb": "https://www.imdb.com/title/tt1392170/",
+            "website": "https://www.lionsgate.com/franchises/the-hunger-games",
+            "likes": 2387,
+            "dislikes": 419,
+            "posterindex": 0
       }
 ]
