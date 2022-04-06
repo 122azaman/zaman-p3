@@ -22,75 +22,82 @@
 
 
 const vue_app = Vue.createApp({
-      // This automatically imports your movies.json file and puts it into
-      //   the variable: movies
-      created () {
-            fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
-            })
-      },
-      data() {
-        return {
-            // This holds your movies.json data.
-            movies: [],
-            title: "IMDB + Alina's Top 8 Movies",
-            owner: "Alina Zaman",
-            github: "https://github.com/122azaman",
+  // This automatically imports your movies.json file and puts it into
+  //   the variable: movies
+  created () {
+        fetch('movies.json').then(response => response.json()).then(json => {
+              this.movies = json
+        })
+  },
+  data() {
+    return {
+        // This holds your movies.json data.
+        movies: [],
+        title: "IMBD + Alina's Top 8 Movies",
+        owner: "Alina Zaman",
+        github: "https://github.com/122azaman/zaman-p3",
+            }
+},
+  methods: {
+    getMonthText(dateArray){
+      var releaseDate;
+      var month;
+      switch (dateArray[1]) {
+
+        case 1:
+        month = "January";
+        break;
+        case 2:
+        month = "February";
+        break;
+        case 3:
+        month = "March";
+        break;
+        case 4:
+        month = "April";
+        break;
+        case 5:
+        month = "May";
+        break;
+        case 6:
+        month = "June";
+        break;
+        case 7:
+        month = "July";
+        break;
+        case 8:
+        month = "August";
+        break;
+        case 9:
+        month = "September";
+        break;
+        case 10:
+        month = "October";
+        break;
+        case 11:
+        month = "November";
+        break;
+        case 12:
+        month = "December";
+        break;
+    }
+    return month + " " + dateArray[2] + " " + dateArray[0];
+
+    },
+    posterClick(index){
+        if(this.movies[index].posterindex >= this.movies[index].posters.length - 1){
+          this.movies[index].posterindex = 0;
+      } else {
+        this.movies[index].posterindex++;
       }
     },
-      methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-            getMonthText(dateArray) {
-              let dateStr = " ";
-              let month = dateArray[1];
-              let day = dateArray[2];
-              let year = dateArray[0];
 
-              switch (month) {
-                case 1:
-                month = "January";
-                break;
-                case 2:
-                month = "February";
-                break;
-                case 3:
-                month = "March";
-                break;
-                case 4:
-                month = "April";
-                break;
-                case 5:
-                month = "May";
-                break;
-                case 6:
-                month = "June";
-                break;
-                case 7:
-                month = "July";
-                break;
-                case 8:
-                month = "August";
-                break;
-                case 9:
-                month = "September";
-                break;
-                case 10:
-                month = "October";
-                break;
-                case 11:
-                month = "November";
-                break;
-                case 12:
-                month = "December";
-                break;
-              }
-              return month + " " + day + ", " + year ;
-            }
+    timeText(minutes){
+      return Math.trunc(minutes/60)+"h"+(minutes%60)+"m";
+    }
 
-            pos
-
-      }
-
+    }
 })
+
 
 vue_app.mount("#vue_app")

@@ -76,11 +76,39 @@
             "runtime": 142,
             "released": [2012, 3, 23],
             "country": "USA",
-            "posters": ["img/.jpg"],
+            "posters": ["img/hungergames.jpg"],
             "imdb": "https://www.imdb.com/title/tt1392170/",
             "website": "https://www.lionsgate.com/franchises/the-hunger-games",
-            "likes": 2387,
+            "likes": 987,
             "dislikes": 419,
             "posterindex": 0
-      }
+      },
+      {
+            "title": "Little Miss Sunshine",
+            "iscore": 7.8,
+            "rating": "R",
+            "runtime": 101,
+            "released": [2006, 7, 26],
+            "country": "USA",
+            "posters": ["img/littlemiss.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0449059/",
+            "website": "https://www.rottentomatoes.com/m/little_miss_sunshine",
+            "likes": 697,
+            "dislikes": 123,
+            "posterindex": 0
+      },
+      {
+            "title": "Death on the Nile",
+            "iscore": 6.4,
+            "rating": "PG-13",
+            "runtime": 127,
+            "released": [2022, 2, 11],
+            "country": "USA",
+            "posters": ["img/deathnile.jpg"],
+            "imdb": "https://www.imdb.com/title/tt7657566/",
+            "website": "https://www.20thcenturystudios.com/movies/death-on-the-nile",
+            "likes": 624,
+            "dislikes": 341,
+            "posterindex": 0
+      },
 ]
